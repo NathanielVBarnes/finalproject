@@ -1,19 +1,92 @@
+
 /* House.css */
 
-div.card-header {
-    background-color: rgb(113, 246, 233);
-}
-
-div.card-footer {
-    background-color: rgb(241, 233, 249);
-}
-
-button.btn-primary {
-    background-color: rgb(113, 246, 233);
-}
-
-div.list-group-item {
-    padding: .75rem;
-    border-color: rgb(113, 246, 233);
-    background-color: rgb(241, 238, 243);
-}
+/* Style for the entire house card */
+.house-card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the house name in the card header */
+  .house-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the edit and delete buttons */
+  .house-buttons {
+    margin-top: 10px;
+  }
+  
+  .house-buttons button {
+    margin-right: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .house-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the room list */
+  .room-list {
+    margin-top: 20px;
+  }
+  
+  /* Style for individual room items */
+  .room-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the room name and area */
+  .room-details {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the edit room button */
+  .edit-room-button {
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .edit-room-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Style for the new room form */
+  .new-room-form {
+    margin-top: 20px;
+  }
+  
+  /* Style for the update room form */
+  .update-room-form {
+    margin-top: 10px;
+  }
+  
+  /* Style for the form controls */
+  .form-control {
+    margin-bottom: 10px;
+  }
+  

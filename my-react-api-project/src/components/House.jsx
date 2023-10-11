@@ -1,4 +1,3 @@
-// House.jsx
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -6,7 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import RoomList from "./RoomList";
 import NewRoomForm from "./NewRoomForm";
 import UpdateHouseForm from "./UpdateHouseForm";
-import "./House.css";
+import "./House.css"; // Import your House.css file
 
 export default function House({ house, updateHouse, deleteHouse }) {
   const [showEditForm, setShowEditForm] = useState(false);
@@ -23,11 +22,11 @@ export default function House({ house, updateHouse, deleteHouse }) {
 
   return (
     <CardGroup>
-      <Card bg="light" text="dark" className="mt-3">
+      <Card bg="light" text="dark" className="mt-3 house-card"> {/* Apply CSS class */}
         <Card.Header className="pt-3">
-          <h5>
+          <h5 className="house-name">
             {!showEditForm && (
-              <div>
+              <div className="house-buttons">
                 <Button
                   className="btn-sm me-1 pt-0 pb-0"
                   title="Delete House"
