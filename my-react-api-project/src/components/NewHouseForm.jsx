@@ -1,9 +1,8 @@
-// NewHouseForm.jsx
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-export default function NewHouseForm({ addHouse }) {
+export default function NewHouseForm({ onSubmit }) {
   const [name, setName] = useState("");
 
   const handleNameChange = (e) => {
@@ -13,7 +12,7 @@ export default function NewHouseForm({ addHouse }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (name !== "") {
-      addHouse({ name });
+      onSubmit({ name });
       setName("");
     } else {
       alert("Invalid house name.");
