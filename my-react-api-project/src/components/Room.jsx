@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import UpdateRoomForm from "./UpdateRoomForm";
-import "./House.css"; // Import your House.css file
+import House from "./House.css"; 
 
 export default function Room(props) {
   const { room, updateRoom, deleteRoom } = props;

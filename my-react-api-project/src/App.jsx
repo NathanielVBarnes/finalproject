@@ -1,19 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
-import HomePage from "./components/HomePage"; // Adjust the import path
-import CreatePage from "./components/CreatePage"; // Adjust the import path
-import EditPage from "./components/EditPage"; // Adjust the import path
+import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./components/HomePage"; 
+import CreatePage from "./components/CreatePage"; 
+import EditPage from "./components/EditPage";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/create" component={CreatePage} />
-        <Route path="/edit/:id" component={EditPage} />
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/create" element={<CreatePage />} />
+      <Route path="/edit/:id" element={<EditPage />} />
+      <Route path="*" element={<h1>Not Found</h1>} />
+    </Routes>
   );
 }
 

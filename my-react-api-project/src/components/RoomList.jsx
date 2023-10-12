@@ -1,7 +1,7 @@
 // RoomList.jsx
 import Card from "react-bootstrap/Card";
 import Room from "./Room";
-import "./House.css";
+import House from "./House"; 
 
 export default function RoomList({ house, updateHouse }) {
   const deleteRoom = (roomId) => {

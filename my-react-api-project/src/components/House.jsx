@@ -5,7 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import RoomList from "./RoomList";
 import NewRoomForm from "./NewRoomForm";
 import UpdateHouseForm from "./UpdateHouseForm";
-import "./House.css"; // Import your House.css file
+import House from "./House.css";  
 
 export default function House({ house, updateHouse, deleteHouse }) {
   const [showEditForm, setShowEditForm] = useState(false);
