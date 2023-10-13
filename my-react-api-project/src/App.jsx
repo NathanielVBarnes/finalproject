@@ -1,10 +1,8 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./components/HomePage"; 
 import CreatePage from "./components/CreatePage"; 
 import EditPage from "./components/EditPage";
-
 function App() {
   return (
     <Routes>
@@ -15,5 +13,4 @@ function App() {
     </Routes>
   );
 }
-
 export default App;
