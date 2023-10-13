@@ -1,11 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import { BrowserRouter } from 'react-router-dom'
 
-function App() {
-  return (
-    <>
-      <h1> Yes it worked. </h1>
-    </>
-  );
-}
 
-export default App; 
+ReactDOM. createRoot (document.getElementById("root")). render(
+<BrowserRouter>
+<React.StrictMode>
+<App />
+</React.StrictMode>
+</BrowserRouter>
+);
