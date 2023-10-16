@@ -1,61 +1,47 @@
-// NewRoomForm.jsx
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-export default function NewRoomForm(props) {
-  const { addRoom } = props;
+export default function NewRoomForm({ addRoom }) {
   const [name, setName] = useState("");
   const [area, setArea] = useState("");
 
-  const handleAreaChange = (e) => {
-    const int = parseInt(e.target.value, 10);
-    setArea(int >= 0 ? int : "");
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (name && area !== "") {
+    if (name !== "" && area > 0) {
       addRoom({ name, area });
       setName("");
       setArea("");
     } else {
-      alert("Invalid room data.");
+      alert("Please provide valid room details.");
     }
   };
 
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm text-end mt-2">
-              <h6>New Room:</h6>
-            </div>
-            <div className="col-sm">
-              <Form.Control
-                type="text"
-                placeholder="Room Name"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-              />
-            </div>
-            <div className="col-sm-2">
-              <Form.Control
-                type="text"
-                placeholder="Sq. Ft."
-                onChange={handleAreaChange}
-                value={area}
-              />
-            </div>
-            <div className="col-sm mt-1 me-2">
-              <Button type="submit" className="btn-sm">
-                Add
-              </Button>
-            </div>
-          </div>
-        </div>
+        <label htmlFor="newRoomName">New Room Name:</label>
+        <Form.Control
+          type="text"
+          id="newRoomName"
+          placeholder="Room Name"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+        />
       </Form.Group>
+      <Form.Group>
+        <label htmlFor="newRoomArea">Area (Sq Ft.):</label>
+        <Form.Control
+          type="number"
+          id="newRoomArea"
+          placeholder="Area"
+          onChange={(e) => setArea(Number(e.target.value))}
+          value={area}
+        />
+      </Form.Group>
+      <Button type="submit" className="btn-sm">
+        Add Room
+      </Button>
     </Form>
   );
 }

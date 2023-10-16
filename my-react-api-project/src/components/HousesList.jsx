@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import House from "./House";
 import NewHouseForm from "./NewHouseForm";
 import { housesApi } from "./HousesApi.jsx";
+import { Link } from "react-dom"; 
 
 export default function HouseList() {
   const [houses, setHouses] = useState([]);
@@ -39,7 +40,7 @@ export default function HouseList() {
           <h1>House List</h1>
         </div>
         <div className="col-sm-8 d-flex flex-row-reverse">
-          <NewHouseForm addHouse={addHouse} />
+          <Link to="/create" className="btn btn-primary">Add New House</Link>
         </div>
       </div>
       <div className="row">
@@ -54,4 +55,4 @@ export default function HouseList() {
       </div>
     </div>
   );
-}
+        }
