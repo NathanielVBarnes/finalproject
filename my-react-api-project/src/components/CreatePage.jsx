@@ -7,7 +7,7 @@ import { housesApi } from "./HousesApi.jsx";
 
 export default function CreatePage() {
   const [houseName, setHouseName] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

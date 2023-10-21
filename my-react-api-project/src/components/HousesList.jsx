@@ -4,8 +4,9 @@ import House from "./House";
 import NewHouseForm from "./NewHouseForm";
 import { housesApi } from "./HousesApi.jsx";
 import { Link } from "react-dom"; 
+import { Button } from "bootstrap";
 
-export default function HouseList() {
+export default function HousesList() {
   const [houses, setHouses] = useState([]);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ export default function HouseList() {
           <h1>House List</h1>
         </div>
         <div className="col-sm-8 d-flex flex-row-reverse">
-          <Link to="/create" className="btn btn-primary">Add New House</Link>
+          {/* <Button to="/create" className="btn btn-primary">Add New House</Button> */}
         </div>
       </div>
       <div className="row">
